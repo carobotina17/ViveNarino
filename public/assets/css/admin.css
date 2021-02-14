@@ -1,0 +1,15 @@
+.action-button, .action-button:active {
+    background:#208f8f;
+    border-radius:20px;
+    font-size:inherit;
+    color:#fff;
+    box-shadow:none;
+    border:none;
+    text-shadow:none;
+    padding:.5rem .8rem;
+    transition:background-color 0.25s;
+}
+p{
+    font-family: 'Oranienbaum', serif;
+    font-size:35px;
+}

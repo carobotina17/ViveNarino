@@ -1,0 +1,24 @@
+.navbar .navbar-brand {
+    font-weight:bold;
+   
+  }
+  
+  .action-button, .action-button:active {
+    background:#208f8f;
+    border-radius:20px;
+    font-size:inherit;
+    color:#fff;
+    box-shadow:none;
+    border:none;
+    text-shadow:none;
+    padding:.5rem .8rem;
+    transition:background-color 0.25s;
+  }
+  h3{
+    font-family: 'Suez One', serif;
+    font-size:45px;
+  }
+  p{
+    font-family: 'Oranienbaum', serif;
+    font-size:40px;
+  }
