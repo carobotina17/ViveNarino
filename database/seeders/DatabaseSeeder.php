@@ -13,6 +13,27 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        self::seedSites();
+        $this->command->info('Tabla sitios inicializada con exito');
     }
+
+    private function seedSites(){
+        DB::table('sitios')->delete();
+
+        foreach( $this->arraySites as $site){
+            $s = new Site;
+            $s->titulo = $site['titulo'];
+            $s->imagen = $site['imagen'];
+            $s->descripcion = $site['descripcion'];
+            $s->save();
+    
+        }
+    }
+
+    private $arraySites = array(
+        array(
+            
+        )
+    )
+
 }
