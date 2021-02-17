@@ -15,9 +15,11 @@ class CreateSitiosTable extends Migration
     {
         Schema::create('sitios', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo');
-            $table->string('imagen');
-            $table->text('descripcion');
+            $table->string('title');
+            $table->string('image');
+            $table->text('description1');
+            $table->text('description2');
+            $table->string('video');
             $table->timestamps();
         });
     }
