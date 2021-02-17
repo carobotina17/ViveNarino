@@ -17,7 +17,9 @@ class CreateSitiosTable extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->string('imagen');
-            $table->text('descripcion');
+            $table->text('descripcion1');
+            $table->text('descripcion2');
+            $table->string('video');
             $table->timestamps();
         });
     }
