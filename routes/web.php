@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 // Bienvenida
 Route::get('/', function () {
     return view('bienvenida');
@@ -42,4 +44,18 @@ Route::get('admin/create', function () {
 Route::get('admin/create/{id}', function ($id) {
     return view('modificar');
 });
+*/
+Route::get('/',[HomeController::class,'getHome']);
+
+Route::get('catalogo',[CatalogController::class,'getIndex']);
+
+Route::get('catalogo/show/{id}',[CatalogController::class,'getShow']);
+
+Route::get('admin/create',[CatalogController::class,'getCreate']);
+// Pagina Admin
+Route::get('admin', function () {
+    return view('admin');
+});
+Route::get('admin/create/{id}',[CatalogController::class,'getEdit']);
+
 
