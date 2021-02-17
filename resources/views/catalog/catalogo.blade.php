@@ -1,13 +1,14 @@
 @extends('layouts.master')
 @section('content')
+
 <div class="container">
-@foreach( $sitios as $key => $sitio)
 <div class="row row-cols-1 row-cols-md-3 g-4">
+@foreach( $sitios as $key => $sitio)
   <div class="col">
     <div class="card h-100">
       <img
         src="{{$sitio['imagen']}}"
-        class="card-img-top"
+        class="card-img-top" width="200" height="350"
       />
       <div class="card-body">
         <h5 class="card-title">"{{$sitio['titulo']}}"</h5>
@@ -18,7 +19,8 @@
       </div>
     </div>
   </div>
-</div>
 @endforeach
 </div>
+</div>
+
 @stop
