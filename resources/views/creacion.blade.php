@@ -18,18 +18,28 @@
                 {{ csrf_field() }}
 
                 <div class="form-group">
-                <label for="title">Título</label>
-                <input type="text" name="title" id="title" class="form-control">
+                <label for="titulo">Título</label>
+                <input type="text" name="titulo" id="titulo" class="form-control">
                 </div>
 
                 <div class="form-group">
-                <label for="poster">Poster</label>
-                <input type="text", name="poster", id="poster" class="form-control">
+                <label for="imagen">Imagen</label>
+                <input type="text", name="imagen", id="imagen" class="form-control">
                 </div>
 
                 <div class="form-group">
-                <label for="descripcion">Descripción</label>
-                <textarea name="descripcion" id="descripcion" class="form-control" rows="3"></textarea>
+                <label for="descripcion1">Descripción1</label>
+                <textarea name="descripcion1" id="descripcion1" class="form-control" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                <label for="descripcion2">Descripción2</label>
+                <textarea name="descripcion2" id="descripcion2" class="form-control" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                <label for="video">Video</label>
+                <input type="text", name="video", id="video" class="form-control">
                 </div>
 
                 <div class="form-group text-center">

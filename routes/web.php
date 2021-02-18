@@ -33,6 +33,7 @@ Route::group(['middleware' => 'auth'],function(){
 
     Route::get('admin/create',[CatalogController::class,'getCreate']);
     Route::get('admin/create/{id}',[CatalogController::class,'getEdit']);
+    Route::post('admin/create', [CatalogController::class,'postCreate']);
     Route::get('admin', function () {
         return view('admin');
     });
