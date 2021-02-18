@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@extends('partials.navbar_admin')
+@extends('partials.navbar')
 @section('content')
     <link rel="stylesheet" href="{{ ('/assets/css/admin.css') }}"/>
   
