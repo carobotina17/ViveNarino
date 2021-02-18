@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Site;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,6 +17,9 @@ class DatabaseSeeder extends Seeder
     {
         self::seedSites();
         $this->command->info('Tabla sitios inicializada con exito');
+    
+        self::seedUsers();
+        $this->command->info('Tabla usuarios inicializada con exito');
     }
 
     private function seedSites(){
@@ -32,6 +36,32 @@ class DatabaseSeeder extends Seeder
     
         }
     }
+
+    private $arrayUsers = array(
+        array(
+            'name' => 'Carolina Botina',
+            'email' => 'caritobotina97@gmail.com',
+            'password' => 'carobo'
+        ),
+        array(
+            'name' => 'Juan Jose Burbano',
+            'email' => 'juaneco1@gmail.com',
+            'password' => 'juanecoveneco'
+        )
+    );
+
+    private function seedUsers(){
+        \DB::table('users')->delete();
+
+        foreach( $this->arrayUsers as $user){
+            $u = new User;
+            $u->name = $user['name'];
+            $u->email = $user['email'];
+            $u->password = bcrypt($user['password']);
+            $u->save();
+        }
+    }
+
 
     private $arraySites = array(
         array(
