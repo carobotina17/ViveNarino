@@ -53,15 +53,14 @@ class CatalogController extends Controller
 	//-Nuevos metodos postcreate y postedit------------------------------------------------------
 	public function postCreate(Request $request) 
 	{	
-		$createMovie= new Movie;
-		$createMovie->title=$request->input('title');
-		$createMovie->year=$request->input('year');
-		$createMovie->director=$request->input('director');
-		$createMovie->poster=$request->input('poster');
-		$createMovie->synopsis=$request->input('synopsis');
-		$createMovie->poster=$request->input('poster');
-		$createMovie->save();
-		return redirect('/catalog');
+		$createSite= new Site;
+		$createSite->titulo=$request->input('titulo');
+		$createSite->imagen=$request->input('imagen');
+		$createSite->descripcion1=$request->input('descripcion1');
+		$createSite->descripcion2=$request->input('descripcion2');
+		$createSite->video=$request->input('video');
+		$createSite->save();
+		return redirect('admin');
 	} 
 
 	public function putEdit(Request $request, $id) 

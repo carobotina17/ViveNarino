@@ -13,3 +13,25 @@ p{
     font-family: 'Oranienbaum', serif;
     font-size:35px;
 }
+.imagen{
+    float: inherit;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 65%;
+    left: 40%;
+}
+.add{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 70%;
+    left: 20%;
+}
+.modify{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+}

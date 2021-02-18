@@ -6,12 +6,9 @@
               <div class="navbar container navigation-clean-search"><a class="navbar-brand" href="#">Vive Nariño</a>
                       <a class="btn btn-light action-button" role="button" href="{{url('catalogo')}}">Conócelos</a>
                        <a class="btn btn-light action-button" role="button" href="{{url('admin')}}">Administrar</a>
-                       
                 </div>
           </nav>
         <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-          
-        
           <!--Indicators-->
           <ol class="carousel-indicators">
             <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>

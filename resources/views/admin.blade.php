@@ -5,14 +5,18 @@
   
     <div class="container">
         <div class="row">
-            <div class="col-xl-6">    
-                <a href="{{URL::to('admin/create')}}"><img src={{asset('assets/img/anadir.png')}} alt="Añadir" ></a><br>
-                <p>AÑADIR NUEVO SITIO TURÍSTICO</p>      
+            <div class="col-xl-6" >    
+            <p>AÑADIR NUEVO SITIO TURÍSTICO</p>  
+            <a href="{{URL::to('admin/create')}}"><img src={{asset('assets/img/anadir.png')}} alt="Añadir" class="add" ></a><br>
+                    
             </div>
             <div class="col-xl-6">     
-                <a href="{{URL::to('admin/edit')}}"><img src={{asset('assets/img/editar.png')}} alt="Editar"></a><br>
-                <p>MODIFICAR SITIO TURÍSTICO</p>     
+                <p>MODIFICAR SITIO TURÍSTICO</p>  
+                <a href="{{URL::to('admin/create{id}')}}"><img src={{asset('assets/img/editar.png')}} alt="Editar" class="modify"></a><br>
+                   
             </div>
         </div>
+        
     </div>
+    <a href="{{URL::to('catalogo')}}"><img src={{asset('assets/img/ver-catalogo.png')}} alt="Catalogo" class="imagen"></a><br>
 @stop
