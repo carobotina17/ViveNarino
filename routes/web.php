@@ -51,11 +51,23 @@ Route::get('catalogo',[CatalogController::class,'getIndex']);
 
 Route::get('catalogo/show/{id}',[CatalogController::class,'getShow']);
 
-Route::get('admin/create',[CatalogController::class,'getCreate']);
+
+
 // Pagina Admin
-Route::get('admin', function () {
-    return view('admin');
+
+Route::group(['middleware' => 'auth'],function(){
+
+    Route::get('admin/create',[CatalogController::class,'getCreate']);
+    Route::get('admin/create/{id}',[CatalogController::class,'getEdit']);
+    Route::get('admin', function () {
+        return view('admin');
+    });
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
-Route::get('admin/create/{id}',[CatalogController::class,'getEdit']);
+
+
+
+
+Auth::routes();
 
 
