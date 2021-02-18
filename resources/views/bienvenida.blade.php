@@ -2,13 +2,15 @@
 @section('content')
         <link rel="stylesheet" href="{{ ('/assets/css/bienvenida.css') }}"/>
         <!--Carousel Wrapper-->
-        <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <div class="navbar container navigation-clean-search"><a class="navbar-brand" href="#">Vive Nariño</a>
-                      <a class="btn btn-light action-button" role="button" href="#">Entrar</a>
-                       <a class="btn btn-light action-button" role="button" href="#">Administrar</a>
+                      <a class="btn btn-light action-button" role="button" href="{{url('catalogo')}}">Conócelos</a>
+                       <a class="btn btn-light action-button" role="button" href="{{url('admin')}}">Administrar</a>
+                       
                 </div>
           </nav>
+        <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+          
         
           <!--Indicators-->
           <ol class="carousel-indicators">

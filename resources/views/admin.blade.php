@@ -10,7 +10,7 @@
                 <p>AÑADIR NUEVO SITIO TURÍSTICO</p>      
             </div>
             <div class="col-xl-6">     
-                <a href="{{URL::to('admin/create{id}')}}"><img src={{asset('assets/img/editar.png')}} alt="Editar"></a><br>
+                <a href="{{URL::to('admin/edit')}}"><img src={{asset('assets/img/editar.png')}} alt="Editar"></a><br>
                 <p>MODIFICAR SITIO TURÍSTICO</p>     
             </div>
         </div>

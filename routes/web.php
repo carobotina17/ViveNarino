@@ -36,10 +36,13 @@ Route::get('catalogo/show/{id}',[CatalogController::class,'getShow']);
 Route::group(['middleware' => 'auth'],function(){
 
     Route::get('admin/create',[CatalogController::class,'getCreate']);
+    Route::get('admin/edit',[CatalogController::class,'getEdit0']);
     Route::get('admin/create/{id}',[CatalogController::class,'getEdit']);
     Route::get('admin', function () {
         return view('admin');
-    });
+    })->name('admin');
+
+    Route::put('admin/create/{id}',[CatalogController::class,'putEdit']);
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
 
