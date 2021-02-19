@@ -35,6 +35,14 @@ class CatalogController extends Controller
 
     }
 
+	public function getEdit0() 
+    { 
+
+        //return view('catalog.edit',['arrayPeliculas'=>$this->arrayPeliculas[$id]]); 
+		$sitios=Site::all();
+		return view('vista_edit',compact('sitios'));
+	}
+
     public function getEdit($id) 
     { 
 
@@ -57,14 +65,14 @@ class CatalogController extends Controller
 
 	public function putEdit(Request $request, $id) 
 	{
-		$editMovie= Movie::findOrFail($id);
-		$editMovie->title=$request->input('title');
-		$editMovie->year=$request->input('year');
-		$editMovie->director=$request->input('director');
-		$editMovie->poster=$request->input('poster');
-		$editMovie->synopsis=$request->input('synopsis');
-		$editMovie->poster=$request->input('poster');
-		$editMovie->save();
-		return redirect('/catalog/show/'.$id);
+		$editSite= Site::findOrFail($id);
+		$editSite->titulo=$request->input('titulo');
+		$editSite->imagen=$request->input('imagen');
+		$editSite->descripcion1=$request->input('descripcion1');
+		$editSite->descripcion2=$request->input('descripcion2');
+		$editSite->video=$request->input('video');
+		$editSite->save();
+
+		return redirect('admin');
 	} 
 }

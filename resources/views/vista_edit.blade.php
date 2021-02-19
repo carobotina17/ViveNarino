@@ -1,5 +1,4 @@
 @extends('layouts.master')
-@extends('partials.navbar')
 @section('content')
 
 <div class="container">
@@ -16,7 +15,7 @@
         <p class="card-text">
           "{{$sitio['descripcion1']}}"
         </p>
-        <a class="btn btn-primary">Saber más...</a>
+        <a class="btn btn-primary" href="{{url('admin/create/'.$sitio->id)}}">Editar</a>
       </div>
     </div>
   </div>

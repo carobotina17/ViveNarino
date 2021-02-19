@@ -16,19 +16,29 @@
                 
 
                 <div class="form-group">
-                <label for="title">Título</label>
-                <input type="text" name="title" id="title" value="{{$pelicula->title}}" class="form-control">
+                <label for="titulo">Título</label>
+                <input type="text" name="titulo" id="titulo" value="{{$sitios->titulo}}" class="form-control">
                 </div>
 
                 <div class="form-group">
                 {{-- TODO: Completa el input para el poster --}}
-                <label for="poster">Poster</label>
-                <input type="text", name="poster", id="poster" value="{{$pelicula->poster}}" class="form-control">
+                <label for="imagen">Imagen</label>
+                <input type="text", name="imagen", id="imagen" value="{{$sitios->imagen}}" class="form-control">
                 </div>
 
                 <div class="form-group">
-                <label for="descripcion">Descripción</label>
-                <textarea name="descripcion" id="descripcion" value="{{$pelicula->synopsis}}" class="form-control" rows="3"></textarea>
+                <label for="descripcion1">Descripción Corta</label>
+                <textarea name="descripcion1" id="descripcion1"  class="form-control" rows="2">{{$sitios->descripcion1}}</textarea>
+                </div>
+
+                <div class="form-group">
+                <label for="descripcion2">Descripción Larga</label>
+                <textarea name="descripcion2" id="descripcion2" class="form-control" rows="5">{{$sitios->descripcion2}}</textarea>
+                </div>
+
+                <div class="form-group">
+                <label for="video">Video</label>
+                <input type="text" name="video" id="video" value="{{$sitios->video}}" class="form-control">
                 </div>
 
                 <div class="form-group text-center">

@@ -29,16 +29,26 @@ Route::get('/',[HomeController::class,'getHome']);
 Route::get('catalogo',[CatalogController::class,'getIndex']);
 Route::get('catalogo/show/{id}',[CatalogController::class,'getShow']);
 
+
+
+// Pagina Admin
+
 Route::group(['middleware' => 'auth'],function(){
 
     Route::get('admin/create',[CatalogController::class,'getCreate']);
+    Route::get('admin/edit',[CatalogController::class,'getEdit0']);
     Route::get('admin/create/{id}',[CatalogController::class,'getEdit']);
     Route::post('admin/create', [CatalogController::class,'postCreate']);
     Route::get('admin', function () {
         return view('admin');
-    });
+    })->name('admin');
+
+    Route::put('admin/create/{id}',[CatalogController::class,'putEdit']);
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
+
+
+
 
 Auth::routes();
 
