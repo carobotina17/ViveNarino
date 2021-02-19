@@ -14,7 +14,7 @@ class CatalogController extends Controller
 
 		
         $sitios=Site::findorFail($id);
-		return view('catalog.show',compact('sitios'));
+		return view('show',compact('sitios'));
     }
 
     public function getIndex() 

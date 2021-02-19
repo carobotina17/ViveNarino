@@ -16,7 +16,7 @@
         <p class="card-text">
           "{{$sitio['descripcion1']}}"
         </p>
-        <a class="btn btn-primary">Saber más...</a>
+        <a class="btn btn-primary" href="{{url('catalogo/show/'.$sitio->id)}}">Saber más...</a>
       </div>
     </div>
   </div>

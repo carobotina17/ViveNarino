@@ -12,9 +12,6 @@
       />
       <div class="card-body">
         <h5 class="card-title">"{{$sitio['titulo']}}"</h5>
-        <p class="card-text">
-          "{{$sitio['descripcion1']}}"
-        </p>
         <a class="btn btn-primary" href="{{url('admin/create/'.$sitio->id)}}">Editar</a>
       </div>
     </div>

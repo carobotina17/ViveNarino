@@ -12,7 +12,7 @@
             </div>
             <div class="col-xl-6">     
                 <p>MODIFICAR SITIO TURÍSTICO</p>  
-                <a href="{{URL::to('admin/create{id}')}}"><img src={{asset('assets/img/editar.png')}} alt="Editar" class="modify"></a><br>
+                <a href="{{URL::to('admin/edit')}}"><img src={{asset('assets/img/editar.png')}} alt="Editar" class="modify"></a><br>
                    
             </div>
         </div>
